@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Recognition with Emotion Detection</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Speech Emotion Detector</h1>
+        <p class="subtitle">Speak and we'll detect your emotional tone</p>
+        
+        <div class="recording-section">
+            <button id="startBtn" class="btn">
+                <i class="fas fa-microphone"></i> Start Recording
+            </button>
+            <button id="stopBtn" class="btn" disabled>
+                <i class="fas fa-stop"></i> Stop
+            </button>
+            <div id="status" class="status">Ready to record</div>
+        </div>
+        
+        <div class="result-section">
+            <div class="transcript-box">
+                <h3>Your Speech:</h3>
+                <div id="transcript" class="transcript"></div>
+            </div>
+            
+            <div class="emotion-results">
+                <h3>Emotion Analysis:</h3>
+                <div id="emotionResults" class="emotion-cards">
+                    <div class="instruction">Your emotion analysis will appear here after recording</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="visual-feedback">
+            <div id="visualizer" class="visualizer"></div>
+            <div id="dominantEmotion" class="dominant-emotion">
+                <div class="label">Dominant Emotion:</div>
+                <div class="emotion-name">-</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
